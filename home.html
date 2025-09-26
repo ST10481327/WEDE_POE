@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html >
+
+<!--The Header -->
+<head>
+  <meta charset="UTF-8">
+  <title>T.E.M Holdings</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!--The Navigation Bar -->
+  <nav>
+    <a href="home.html"><button>Home</button></a>
+    <a href="about.html"><button>About Us</button></a>
+    <a href="gallery.html"><button>Gallery</button></a>
+    <a href="news.html"><button>News</button></a>
+    <a href="contact.html"><button>Contact Us</button></a>
+    <a href="location.html"><button>Location</button></a>
+  </nav>
+  
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1 class="hero-title">Welcome to T.E.M Holdings</h1>
+    <div class="bubbles">
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+    </div>
+  </div>
+
+  <!--The Home Content -->
+  <div id="home" style="text-align:center;">
+    <h1>Welcome to T.E.M Holdings</h1>
+    <p>Your trusted consultancy for graphic design and business documentation.</p>
+    <p>We Live. We Inspire. We Grind.</p>
+    <img src="IMAGES/TEM Holdings.png" style="width:750px; height:750px;" alt="T.E.M Holdings Logo">
+    <h2>T.E.M Holdings</h2>
+  </div>
+
+  <!--The Registration Section -->
+  <div id="register" class="centered-section">
+    <h2>Create an Account</h2>
+    <form>
+      <label>Cellphone Number:</label><br>
+      <input type="text" name="cellphone" placeholder="Enter cellphone number" required><br><br>
+
+      <label>Address:</label><br>
+      <input type="text" name="address" placeholder="Enter your address" required><br><br>
+
+      <label>Email:</label><br>
+      <input type="email" name="email" placeholder="Enter your email" required><br><br>
+
+      <label>Password:</label><br>
+      <input type="password" name="password" placeholder="Enter password" required><br><br>
+
+      <button type="submit">Create Account</button>
+    </form>
+
+    <p>Already have an account? <a href="#login">Login here</a></p>
+  </div>
+
+  <!--The Login Section -->
+  <div id="login" class="centered-section">
+    <h2>Login</h2>
+    <form>
+      <label>Email:</label><br>
+      <input type="email" name="login_email" placeholder="Enter email" required><br><br>
+
+      <label>Password:</label><br>
+      <input type="password" name="login_password" placeholder="Enter password" required><br><br>
+
+      <button type="submit">Login</button><br><br>
+      <a href="#reset"><button type="button">Forgot Password?</button></a>
+    </form>
+
+    <p>Don’t have an account? <a href="#register">Register here</a></p>
+  </div>
+
+  <!--The Reset Password Section -->
+  <div id="reset" class="centered-section">
+    <h2>Reset Your Password</h2>
+    <p>Enter your email or phone number, and we’ll send you a code to reset your password.</p>
+    <form>
+      <label>Email or Phone Number:</label><br>
+      <input type="text" name="reset_info" placeholder="Enter email or phone" required><br><br>
+
+      <button type="submit">Send Reset Code</button>
+    </form>
+
+    <p>Back to <a href="#login">Login</a> or <a href="#register">Register</a></p>
+  </div>
+
+  <!--The Footer -->
+  <footer>
+    <p>&copy; 2025 T.E.M Holdings / All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
