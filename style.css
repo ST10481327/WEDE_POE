@@ -1,325 +1,858 @@
-/* ================================
-   CSS Reset
-=================================== */
+/* =======================
+   GLOBAL STYLES
+======================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
-/* ================================
-   Base Styles
-=================================== */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
+  background: #f9f9f9;
   color: #333;
-  background-color: #f8f9fa;
-  margin: 0;
-  padding: 0;
+  line-height: 1.6;
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Trebuchet MS', sans-serif;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: #222;
-}
-
-p {
-  margin-bottom: 15px;
-  letter-spacing: 0.5px;
-}
-
-/* ================================
-   Navigation
-=================================== */
+/* =======================
+   NAVIGATION BAR
+======================= */
 nav {
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
   display: flex;
   justify-content: center;
-  background-color: #222;
-  padding: 10px;
-  flex-wrap: wrap;
+  align-items: center;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 nav a {
   text-decoration: none;
-  margin: 5px;
+  margin: 0 10px;
 }
 
 nav button {
-  background-color: #444;
-  color: white;
-  padding: 10px 20px;
+  background: #fff;
+  color: #1e3c72;
   border: none;
-  border-radius: 6px;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
   cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 nav button:hover {
-  background-color: #007bff;
+  background: #ffb703;
+  color: #fff;
   transform: scale(1.05);
 }
 
-/* ================================
-   Header
-=================================== */
-header {
-  text-align: center;
-  padding: 20px;
-  background-color: #fff;
-  border-bottom: 2px solid #ddd;
+/* Toggle button */
+.toggle-container {
+  position: absolute;
+  right: 20px;
+  top: 15px;
 }
 
-header img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* ================================
-   Main Layout (Flexbox)
-=================================== */
-main, #contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
+.toggle-btn {
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-#contact img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 15px;
-  border-radius: 8px;
-}
-
-/* ================================
-   Forms
-=================================== */
-form {
-  width: 100%;
-  max-width: 400px;
-  margin: 20px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-input, button[type="submit"], button[type="button"] {
-  width: 90%;
-  padding: 10px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-input:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-button[type="submit"], button[type="button"] {
-  background: #007bff;
-  color: white;
   border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+  color: #1e3c72;
+  transition: all 0.3s ease;
 }
 
-button[type="submit"]:hover, button[type="button"]:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
+.toggle-btn:hover {
+  background: #ffb703;
+  color: #fff;
 }
 
-/* ================================
-   Payment Section
-=================================== */
-#payment {
-  background-color: #f1f1f1;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 450px;
-}
-
-#payment h3 {
-  color: #007bff;
-  margin-bottom: 15px;
-}
-
-/* ================================
-   Receipt Section
-=================================== */
-#receipt a {
-  display: inline-block;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  margin-top: 10px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-#receipt a:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-}
-
-/* ================================
-   Footer
-=================================== */
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #222;
-  color: white;
-  margin-top: 20px;
-}
-
-/* ================================
-   Responsive Design
-=================================== */
-@media screen and (max-width: 1024px) {
-  main, #contact {
-    padding: 15px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  nav {
-    flex-direction: column;
-  }
-
-  form input, form button {
-    width: 95%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-  h2 {
-    font-size: 1.25rem;
-  }
-  #payment {
-    width: 100%;
-    padding: 15px;
-  }
-}
-/* ================================
-   Centered Sections (Registration/Login, Payment, Map)
-=================================== */
-.centered-section {
-  background-color: #f1f1f1;
-  padding: 20px;
-  margin: 30px auto;
-  border-radius: 8px;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.centered-section form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.centered-section input,
-.centered-section button {
-  width: 90%;
-  margin: 8px 0;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.centered-section button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.centered-section button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-}
-/* Hero Section with Bubbles */
+/* =======================
+   HERO SECTION
+======================= */
 .hero {
   position: relative;
+  height: 70vh;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: #fff;
   text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  color: white;
 }
 
 .hero-title {
-  font-size: 3em;
+  font-size: 3rem;
   font-weight: bold;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
   z-index: 2;
-  position: relative;
+  animation: fadeIn 2s ease;
 }
 
 .bubbles {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  overflow: hidden;
-  z-index: 1;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .bubble {
-  position: absolute;
-  bottom: -150px;
-  background: rgba(255, 255, 255, 0.3);
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+  background: rgba(255, 255, 255, 0.4);
   border-radius: 50%;
-  animation: rise 20s infinite ease-in;
+  animation: bubbleUp 6s infinite ease-in-out;
 }
 
-.bubble:nth-child(1) {
-  width: 40px; height: 40px; left: 10%;
-  animation-duration: 15s;
-}
-.bubble:nth-child(2) {
-  width: 25px; height: 25px; left: 25%;
-  animation-duration: 12s;
-}
-.bubble:nth-child(3) {
-  width: 50px; height: 50px; left: 40%;
-  animation-duration: 18s;
-}
-.bubble:nth-child(4) {
-  width: 35px; height: 35px; left: 60%;
-  animation-duration: 14s;
-}
-.bubble:nth-child(5) {
-  width: 20px; height: 20px; left: 75%;
-  animation-duration: 10s;
-}
-.bubble:nth-child(6) {
-  width: 60px; height: 60px; left: 85%;
-  animation-duration: 22s;
+.bubble:nth-child(2) { animation-delay: 1s; }
+.bubble:nth-child(3) { animation-delay: 2s; }
+.bubble:nth-child(4) { animation-delay: 3s; }
+.bubble:nth-child(5) { animation-delay: 4s; }
+
+@keyframes bubbleUp {
+  0% { transform: translateY(0); opacity: 0.6; }
+  100% { transform: translateY(-600px); opacity: 0; }
 }
 
-@keyframes rise {
-  0% { transform: translateY(0); opacity: 0.7; }
-  100% { transform: translateY(-120vh); opacity: 0; }
+/* =======================
+   CONTENT SECTIONS
+======================= */
+h1, h2 {
+  color: #1e3c72;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.centered-section {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 500px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* =======================
+   FORMS
+======================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea, select {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #1e3c72;
+  outline: none;
+  box-shadow: 0 0 5px rgba(30, 60, 114, 0.4);
+}
+
+button[type="submit"], button[type="button"] {
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover, button[type="button"]:hover {
+  background: #ffb703;
+  transform: translateY(-3px);
+}
+
+/* =======================
+   GALLERY & NEWS
+======================= */
+#gallery, #news {
+  text-align: center;
+  margin: 40px auto;
+}
+
+#gallery img, #news img {
+  border-radius: 10px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#gallery img:hover, #news img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* =======================
+   CONTACT SECTION
+======================= */
+#contact {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 700px;
+}
+
+#contact img {
+  width: 100%;
+  max-width: 450px;
+  margin: 20px auto;
+  border-radius: 15px;
+  display: block;
+}
+
+#payment {
+  margin-top: 30px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#receipt {
+  margin-top: 20px;
+  background: #e9f5e9;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #b5e0b5;
+}
+
+#receipt a {
+  display: inline-block;
+  background: #1e3c72;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+#receipt a:hover {
+  background: #ffb703;
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+  background: #1e3c72;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* =======================
+   ANIMATIONS
+======================= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =======================
+   DARK MODE STYLING
+======================= */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode nav {
+  background: linear-gradient(90deg, #000428, #004e92);
+}
+
+body.dark-mode button,
+body.dark-mode input,
+body.dark-mode textarea {
+  background: #1e1e1e;
+  color: #e0e0e0;
+  border: 1px solid #333;
+}
+
+body.dark-mode button:hover {
+  background: #ffb703;
+  color: #000;
+}
+
+body.dark-mode .centered-section,
+body.dark-mode #payment {
+  background: #1a1a1a;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode footer {
+  background: #000428;
+}
+
+body.dark-mode a {
+  color: #ffb703;
+}
+
+/* =======================
+   RESPONSIVE DESIGN
+======================= */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  nav button {
+    margin: 5px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  #gallery img, #news img {
+    width: 90%;
+    height: auto;
+  }
+}
+/* General Page Style */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #003366;
+  padding: 10px;
+}
+
+nav a button {
+  background-color: #ffffff;
+  border: none;
+  color: #003366;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+nav a button:hover {
+  background-color: #0055aa;
+  color: white;
+}
+
+/* Location Section */
+#location {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#location h2 {
+  color: #003366;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+#location p {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Map Container */
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #003366;
+  color: white;
+  padding: 15px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  text-align: center;
+}
+
+nav {
+  background-color: #003366;
+  padding: 10px;
+}
+
+nav a button {
+  background: #ffffff;
+  border: none;
+  color: #003366;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+nav a button:hover {
+  background: #0055aa;
+  color: white;
+}
+
+.centered-section {
+  max-width: 600px;
+  background: white;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #003366;
+}
+
+button {
+  background-color: #003366;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0055aa;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+/* Welcome Section */
+#welcome {
+  background: linear-gradient(135deg, #004080, #0073e6);
+  color: white;
+  padding: 60px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #003366;
+  padding: 10px;
+}
+
+nav a button {
+  background: #ffffff;
+  border: none;
+  color: #003366;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+nav a button:hover {
+  background: #0055aa;
+  color: white;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('../IMAGES/TEM Holdings.png') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 700px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero h1 span {
+  color: #00bfff;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  background: #00bfff;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.hero button:hover {
+  background: #0099cc;
+}
+
+/* Sections */
+.centered-section {
+  max-width: 600px;
+  background: white;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #003366;
+}
+
+button {
+  background-color: #003366;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0055aa;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* Welcome Section */
+#welcome {
+  background: linear-gradient(135deg, #004080, #0073e6);
+  color: white;
+  padding: 60px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+/* ===== Gallery Styling ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 250px;              /* Makes all images the same height */
+  object-fit: cover;          /* Ensures images fill space without distortion */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+}
+
+/* ===== Lightbox Modal ===== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  text-align: center;
+}
+
+nav {
+  background-color: #003366;
+  padding: 10px;
+}
+
+nav button {
+  background: #ffffff;
+  border: none;
+  color: #003366;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+nav button:hover {
+  background: #0055aa;
+  color: white;
+}
+
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h2 {
+  color: #003366;
+}
+
+/* Item List Buttons */
+.item-button {
+  display: block;
+  width: 90%;
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 15px;
+  background: #ffffff;
+  border: 2px solid #003366;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 18px;
+}
+
+.item-button:hover {
+  background: #003366;
+  color: white;
+  transform: scale(1.03);
+}
+
+/* Info Box */
+.info-box {
+  background: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  max-width: 700px;
+  text-align: left;
+  display: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.info-box.active {
+  display: block;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.info-box h3 {
+  color: #003366;
+}
+
+.info-box .price {
+  color: #008000;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+  margin-top: 50px;
+}
+/* =======================
+   Company Registration Items
+======================= */
+#itemsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.item-button {
+  display: block;
+  width: 90%;
+  max-width: 500px;
+  margin: 10px 0;
+  padding: 15px;
+  background: #ffffff;
+  border: 2px solid #003366;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  text-align: center;
+}
+
+.item-button:hover {
+  background: #003366;
+  color: white;
+  transform: scale(1.03);
+}
+
+/* Info Box Styling */
+.info-box {
+  display: none; /* hidden by default */
+  background: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  max-width: 700px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.info-box.active {
+  display: block;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.info-box h3 {
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.info-box p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.info-box .price {
+  color: #008000;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Simple fadeIn Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.action-btn {
+  display: block;
+  background: #1877F2;
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.action-btn:hover {
+  opacity: 0.8;
+}
+
+.ticket-popup {
+  background: #fff;
+  padding: 20px;
+  border: 2px solid #999;
+  border-radius: 10px;
+  margin-top: 20px;
 }
