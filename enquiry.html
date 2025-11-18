@@ -1,9 +1,9 @@
 <!doctype html>
-<html >
+<html>
 <head>
   <meta charset="utf-8" />
-  <title>Contact — T.E.M Holdings</title>
-  <meta name="description" content="Contact T.E.M Holdings for company registration, graphic design or documentation." />
+  <title>Enquiry — T.E.M Holdings</title>
+  <meta name="description" content="Make an enquiry about our services, volunteering or sponsorship." />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -20,42 +20,34 @@
   </nav>
 
 
-  <main id="contact" class="centered-section">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:info@womantmspaza.com">info@womantmspaza.com</a></p>
+  <main id="enquiry" class="centered-section">
+    <h2>Enquire about services</h2>
 
-    <form id="contactForm" novalidate>
-      <label for="c-name">Full name</label>
-      <input id="c-name" name="name" type="text" required minlength="2" />
+    <form id="enquiryForm" novalidate>
+      <label for="e-name">Full name</label>
+      <input id="e-name" name="name" type="text" required />
 
-      <label for="c-email">Email</label>
-      <input id="c-email" name="email" type="email" required />
+      <label for="e-email">Email</label>
+      <input id="e-email" name="email" type="email" required />
 
-      <label for="c-phone">Phone</label>
-      <input id="c-phone" name="phone" type="tel" pattern="\\+?[0-9 \\-]{7,15}" />
-
-      <label for="c-type">Message type</label>
-      <select id="c-type" name="type" required>
-        <option value="">Select</option>
-        <option value="general">General</option>
-        <option value="support">Support</option>
-        <option value="sales">Sales</option>
+      <label for="e-service">Service interested in</label>
+      <select id="e-service" name="service" required>
+        <option value="">Select service</option>
+        <option value="registration">Company registration</option>
+        <option value="design">Graphic design</option>
+        <option value="docs">Business documents</option>
       </select>
 
-      <label for="c-message">Message</label>
-      <textarea id="c-message" name="message" rows="6" required minlength="10"></textarea>
+      <label for="e-details">Details</label>
+      <textarea id="e-details" name="details" rows="4"></textarea>
 
       <div class="form-actions">
-        <button type="submit">Send Message</button>
+        <button type="submit">Get Estimate</button>
       </div>
 
-      <div id="contactFormMessage" class="form-message" aria-live="polite"></div>
+      <div id="enquiryResult" class="form-message" aria-live="polite"></div>
     </form>
   </main>
-
-  <footer>
-    <p>&copy; 2025 T.E.M Holdings / All Rights Reserved</p>
-  </footer>
    <!-- SOCIAL MEDIA LINKS -->
     <div class="social-links">
       <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Facebook">

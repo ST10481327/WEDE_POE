@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Owner Dashboard — T.E.M Holdings</title>
+  <meta name="description" content="Owner dashboard to manage agents and company registrations. Requires owner access." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <nav>
+    <a href="home.html"><button>Home</button></a>
+    <a href="about.html"><button>About Us</button></a>
+    <a href="gallery.html"><button>Gallery</button></a>
+    <a href="news.html"><button>News</button></a>
+    <a href="contact.html"><button>Contact Us</button></a>
+    <a href="location.html"><button>Location</button></a>
+	<a href="dashboard.html"><button>Dashboard</button></a>
+	 <a href="enquiry.html"><button>Enquiry</button></a>
+  </nav>
+
+  <main class="centered-section">
+    <h2>Owner Dashboard</h2>
+    
+
+    <section class="dashboard-container">
+      <aside class="dashboard-sidebar">
+        <h3>Agents</h3>
+        <form id="agentForm">
+          <label for="agentName">Name</label>
+          <input id="agentName" type="text" required />
+          <label for="agentPhone">Phone</label>
+          <input id="agentPhone" type="text" />
+          <button type="submit">Add / Update Agent</button>
+        </form>
+
+        <ul id="agentsList"></ul>
+      </aside>
+
+      <main class="dashboard-main">
+        <h3>Companies</h3>
+        <form id="companyForm">
+          <label for="companyName">Company Name</label>
+          <input id="companyName" type="text" required />
+          <label for="companyClient">Client</label>
+          <input id="companyClient" type="text" />
+          <label for="companyStatus">Status</label>
+          <select id="companyStatus">
+            <option>draft</option><option>submitted</option><option>registered</option>
+          </select>
+          <label for="companyAgent">Assign to agent (id)</label>
+          <input id="companyAgent" type="text" placeholder="agent-id (e.g. agent-1)" />
+          <button type="submit">Add / Update Company</button>
+        </form>
+
+        <div class="table-wrap">
+          <table id="companiesTable" aria-live="polite">
+            <thead><tr><th>Company</th><th>Client</th><th>Status</th><th>Agent</th><th>Actions</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </main>
+
+      <aside class="dashboard-activity">
+        <h3>Activity Log</h3>
+        <ul id="activityLog"></ul>
+      </aside>
+    </section>
+  </main>
+  
+   <!-- SOCIAL MEDIA LINKS -->
+    <div class="social-links">
+      <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Facebook">
+        <img src="IMAGES/facebook.png" alt="Facebook" width="30">
+      </a>
+
+      <a href="https://www.instagram.com/yourpage" target="_blank" aria-label="Instagram">
+        <img src="IMAGES/instagram.png" alt="Instagram " width="30">
+      </a>
+
+      <a href="https://twitter.com/yourpage" target="_blank" aria-label="X/Twitter">
+        <img src="IMAGES/twitter.png" alt="Twitter" width="30">
+      </a>
+
+      <a href="https://www.linkedin.com/company/yourpage" target="_blank" aria-label="LinkedIn">
+        <img src="IMAGES/linkedin.png" alt="LinkedIn " width="30">
+      </a>
+    </div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

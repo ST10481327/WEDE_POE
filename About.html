@@ -1,57 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
- <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <title>About — T.E.M Holdings</title>
+
+  <meta name="description" content="About T.E.M Holdings — our mission, vision, business consulting, document fixing, IT services, and company registration support." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- SEO: Social Media Preview -->
+  <meta property="og:title" content="About T.E.M Holdings">
+  <meta property="og:description" content="Learn more about T.E.M Holdings — A professional company offering document fixing, business consulting, and IT services.">
+  <meta property="og:type" content="website">
+
   <link rel="stylesheet" href="css/style.css">
-  <title>T.E.M Holdings - About Us</title>
 </head>
 <body>
 
- <!-- Navigation Bar -->
-   <nav>
+  <nav>
     <a href="home.html"><button>Home</button></a>
     <a href="about.html"><button>About Us</button></a>
     <a href="gallery.html"><button>Gallery</button></a>
     <a href="news.html"><button>News</button></a>
     <a href="contact.html"><button>Contact Us</button></a>
     <a href="location.html"><button>Location</button></a>
+    <a href="dashboard.html"><button>Dashboard</button></a>
+    <a href="enquiry.html"><button>Enquiry</button></a>
   </nav>
 
- <!-- About Us Content -->
-  <div id="about" style="text-align:center;">
-   <h2>About Us</h2>
-   <p>We assist with graphic designs and business documentation. Affordable, reliable, and timely.</p>
-   <img src="IMAGES/about1.jpg" style="width:450px; height:450px;">
-   <img src="IMAGES/about2.jpg" style="width:450px; height:450px;">
+  <main id="about" class="centered-section">
+    <h2>About Us</h2>
+    <p>We assist with graphic designs, company documents, document fixing, IT solutions, and business consulting. Affordable, reliable, and timely.</p>
 
-   <h2>Our Vision</h2>
-   <p>
-     At <strong>T.E.M Holdings</strong>, our vision is to become the leading partner for both small and large businesses, 
-     providing professional registration services and comprehensive support that empowers companies to operate legally, 
-     confidently, and sustainably. We aim to create opportunities for entrepreneurs to turn their ideas into successful businesses 
-     by simplifying the registration process and offering ongoing guidance.
-   </p>
+    <img src="IMAGES/about1.jpg" alt="T.E.M Holdings design team at work" width="300" />
+    <img src="IMAGES/about2.jpg" alt="Business documentation and processing" width="300" />
 
-   <h2>Our Mission</h2>
-   <p>
-     Our mission is to make business registration and documentation accessible, affordable, and efficient for everyone — 
-     whether you are starting a small venture or managing a large enterprise. We are committed to helping businesses grow 
-     by providing reliable services in registration, graphic design, and documentation, while building long-term relationships 
-     based on trust and excellence.
-   </p>
+    <h3>Our Vision</h3>
+    <p>At <strong>T.E.M Holdings</strong>, our vision is to become the leading partner for businesses by providing smart, innovative, and reliable solutions that help organisations grow and stay compliant.</p>
 
-   <h2>Company Video</h2>
-   <p>Watch our story and learn more about how T.E.M Holdings can help you grow.</p>
-   <video width="640" height="360" controls>
-     <source src="IMAGES/company.mp4" type="video/mp4">
-     Your browser does not support the video tag.
-   </video>
-  </div>
+    <h3>Company Video</h3>
+    <p>Watch our story and learn more about how T.E.M Holdings can support your business growth.</p>
 
-  <!-- Footer -->
+    <video width="490" height="360" controls aria-label="Company video">
+      <source src="IMAGES/company.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </main>
+
   <footer>
     <p>&copy; 2025 T.E.M Holdings / All Rights Reserved</p>
+
+    <!-- SOCIAL MEDIA LINKS -->
+    <div class="social-links">
+      <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Facebook">
+        <img src="IMAGES/facebook.png" alt="Facebook" width="30">
+      </a>
+
+      <a href="https://www.instagram.com/yourpage" target="_blank" aria-label="Instagram">
+        <img src="IMAGES/instagram.png" alt="Instagram " width="30">
+      </a>
+
+      <a href="https://twitter.com/yourpage" target="_blank" aria-label="X/Twitter">
+        <img src="IMAGES/twitter.png" alt="Twitter" width="30">
+      </a>
+
+      <a href="https://www.linkedin.com/company/yourpage" target="_blank" aria-label="LinkedIn">
+        <img src="IMAGES/linkedin.png" alt="LinkedIn " width="30">
+      </a>
+    </div>
+
   </footer>
 
+  <script src="js/script.js" defer></script>
 </body>
 </html>

@@ -1,36 +1,61 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html >
 <head>
- <meta charset="UTF-8">
-  <title>T.E.M Holdings - Gallery</title>
-   <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <title>Gallery — T.E.M Holdings</title>
+  <meta name="description" content="Gallery of designs and business documentation examples by T.E.M Holdings." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
- <! On-Click button >
-  <nav>
+   <nav>
     <a href="home.html"><button>Home</button></a>
     <a href="about.html"><button>About Us</button></a>
     <a href="gallery.html"><button>Gallery</button></a>
     <a href="news.html"><button>News</button></a>
     <a href="contact.html"><button>Contact Us</button></a>
     <a href="location.html"><button>Location</button></a>
+	<a href="dashboard.html"><button>Dashboard</button></a>
+	 <a href="enquiry.html"><button>Enquiry</button></a>
   </nav>
 
-  
+  <main id="gallery" class="centered-section">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="IMAGES/gallery 1.jpg" alt="Design sample 1" class="lightbox-thumb" />
+      <img src="IMAGES/gallery 2.jpg" alt="Design sample 2" class="lightbox-thumb" />
+      <img src="IMAGES/gallery 3.jpg" alt="Design sample 3" class="lightbox-thumb" />
+    </div>
+  </main>
 
-  <! Gallery content >
-  <div id="gallery">
-     <h2>Gallery</h2>
-      <img src="IMAGES/gallery 1.jpg" style="width:450px; height:450px;">
-      <img src="IMAGES/gallery 2.jpg" style="width:450px; height:450px;">
-      <img src="IMAGES/gallery 3.jpg" style="width:450px; height:450px;">
-   
+  <!-- Modal for lightbox -->
+  <div id="lightboxModal" class="modal hidden" role="dialog" aria-modal="true">
+    <button class="modal-close" aria-label="Close">×</button>
+    <img id="lightboxImage" src="" alt="" />
   </div>
 
   <footer>
     <p>&copy; 2025 T.E.M Holdings / All Rights Reserved</p>
   </footer>
+   <!-- SOCIAL MEDIA LINKS -->
+    <div class="social-links">
+      <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Facebook">
+        <img src="IMAGES/facebook.png" alt="Facebook" width="30">
+      </a>
 
+      <a href="https://www.instagram.com/yourpage" target="_blank" aria-label="Instagram">
+        <img src="IMAGES/instagram.png" alt="Instagram " width="30">
+      </a>
+
+      <a href="https://twitter.com/yourpage" target="_blank" aria-label="X/Twitter">
+        <img src="IMAGES/twitter.png" alt="Twitter" width="30">
+      </a>
+
+      <a href="https://www.linkedin.com/company/yourpage" target="_blank" aria-label="LinkedIn">
+        <img src="IMAGES/linkedin.png" alt="LinkedIn " width="30">
+      </a>
+    </div>
+
+  <script src="js/script.js" defer></script>
 </body>
 </html>

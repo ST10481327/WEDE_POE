@@ -1,35 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
- <meta charset="UTF-8">
-  <title>T.E.M Holdings - News</title>
-   <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <title>Company Registration — T.E.M Holdings</title>
+  <meta name="description" content="Everything needed to register a company in South Africa including requirements and prices." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
- <! On-Click button >
- <nav>
+  <nav>
     <a href="home.html"><button>Home</button></a>
     <a href="about.html"><button>About Us</button></a>
     <a href="gallery.html"><button>Gallery</button></a>
     <a href="news.html"><button>News</button></a>
     <a href="contact.html"><button>Contact Us</button></a>
     <a href="location.html"><button>Location</button></a>
+    <a href="dashboard.html"><button>Dashboard</button></a>
+    <a href="enquiry.html"><button>Enquiry</button></a>
   </nav>
 
-<! News on us content >
-  <div id="news">
-      <h2>News</h2>
-      <img src="IMAGES/news1.jpg"  style="width:450px; height:450px;">
-      <img src="IMAGES/news2.jpg"  style="width:450px; height:450px;">
-	   <img src="IMAGES/news3.jpg"  style="width:450px; height:450px;">
-	    <img src="IMAGES/news4.jpg"  style="width:450px; height:450px;">
-		 <img src="IMAGES/news5.jpg"  style="width:450px; height:450px;">
-    </div>
+  <main id="news">
+    <h2>Company Registration Services</h2>
+
+    
+    <label for="serviceSelect"><strong>Select a service:</strong></label>
+    <select id="serviceSelect">
+      <option value="">-- Select a service --</option>
+    </select>
+
+ 
+    <div id="itemInfo" class="info-box">
+  <h3 id="itemTitle"></h3>
+  <p id="itemDesc"></p>
+  <p class="price">Price: R<span id="itemPrice"></span></p>
+  <p><strong>Assigned Agent:</strong> <span id="itemAgent"></span></p>
+
+  <div id="contactOptions" style="display:none; margin-top:20px;">
+    <h3>Contact Options</h3>
+
+    <!-- WhatsApp Button -->
+    <a id="whatsappLink" class="action-btn" target="_blank">
+      💬 Contact Agent via WhatsApp
+    </a>
+
+    <!-- Email Button -->
+    <a id="emailLink" class="action-btn" target="_blank">
+      📧 Email the Agent
+    </a>
+
+    <!-- Ticket System -->
+    <button id="openTicket" class="action-btn">📝 Submit Online Ticket</button>
+  </div>
+
+  <!-- TICKET FORM POPUP -->
+  <div id="ticketForm" class="ticket-popup" style="display:none;">
+    <h3>Submit a Support Ticket</h3>
+    <form id="ticketSubmitForm">
+      <label>Your Name:</label>
+      <input type="text" name="clientName" required>
+
+      <label>Your Email:</label>
+      <input type="email" name="clientEmail" required>
+
+      <label>Your Message:</label>
+      <textarea name="clientMessage" rows="5" required></textarea>
+
+      <button type="submit">Submit Ticket</button>
+      <button type="button" id="closeTicket">Cancel</button>
+    </form>
+  </div>
+</div>
+
+
+  </main>
 
   <footer>
     <p>&copy; 2025 T.E.M Holdings / All Rights Reserved</p>
   </footer>
+   <!-- SOCIAL MEDIA LINKS -->
+    <div class="social-links">
+      <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Facebook">
+        <img src="IMAGES/facebook.png" alt="Facebook" width="30">
+      </a>
 
+      <a href="https://www.instagram.com/yourpage" target="_blank" aria-label="Instagram">
+        <img src="IMAGES/instagram.png" alt="Instagram " width="30">
+      </a>
+
+      <a href="https://twitter.com/yourpage" target="_blank" aria-label="X/Twitter">
+        <img src="IMAGES/twitter.png" alt="Twitter" width="30">
+      </a>
+
+      <a href="https://www.linkedin.com/company/yourpage" target="_blank" aria-label="LinkedIn">
+        <img src="IMAGES/linkedin.png" alt="LinkedIn " width="30">
+      </a>
+    </div>
+
+  <script src="js/services.js" defer></script>
 </body>
 </html>

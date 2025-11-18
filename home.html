@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html >
-
-<!--The Header -->
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>T.E.M Holdings</title>
+  <meta charset="utf-8" />
+  <title>T.E.M Holdings — Company Registration & Business Consultancy Services</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
-  <!--The Navigation Bar -->
+  <!-- Navigation Bar -->
   <nav>
     <a href="home.html"><button>Home</button></a>
     <a href="about.html"><button>About Us</button></a>
@@ -18,87 +16,89 @@
     <a href="news.html"><button>News</button></a>
     <a href="contact.html"><button>Contact Us</button></a>
     <a href="location.html"><button>Location</button></a>
+    <a href="dashboard.html"><button>Dashboard</button></a>
+    <a href="enquiry.html"><button>Enquiry</button></a>
   </nav>
-  
+
   <!-- Hero Section -->
-  <div class="hero">
-    <h1 class="hero-title">Welcome to T.E.M Holdings</h1>
-    <div class="bubbles">
-      <span class="bubble"></span>
-      <span class="bubble"></span>
-      <span class="bubble"></span>
-      <span class="bubble"></span>
-      <span class="bubble"></span>
-      <span class="bubble"></span>
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Welcome to <span>T.E.M Holdings</span></h1>
+      <p>Your trusted partner for company registration & business consultancy services.</p>
+      <a href="#register"><button>Get Started</button></a>
     </div>
-  </div>
+  </section>
 
-  <!--The Home Content -->
-  <div id="home" style="text-align:center;">
-    <h1>Welcome to T.E.M Holdings</h1>
-    <p>Your trusted consultancy for graphic design and business documentation.</p>
-    <p>We Live. We Inspire. We Grind.</p>
-    <img src="IMAGES/TEM Holdings.png" style="width:750px; height:750px;" alt="T.E.M Holdings Logo">
-    <h2>T.E.M Holdings</h2>
-  </div>
+  <!-- Registration Section -->
+  <section id="register" class="centered-section">
+    <h2>Register & Submit Your Company Details</h2>
+    <form id="registrationForm">
+      <h3>Personal Information</h3>
 
-  <!--The Registration Section -->
-  <div id="register" class="centered-section">
-    <h2>Create an Account</h2>
-    <form>
+      <label>Full Name:</label><br>
+      <input type="text" id="fullname" required><br><br>
+
       <label>Cellphone Number:</label><br>
-      <input type="text" name="cellphone" placeholder="Enter cellphone number" required><br><br>
-
-      <label>Address:</label><br>
-      <input type="text" name="address" placeholder="Enter your address" required><br><br>
+      <input type="text" id="cellphone" placeholder="+27XXXXXXXXXX" required><br><br>
 
       <label>Email:</label><br>
-      <input type="email" name="email" placeholder="Enter your email" required><br><br>
+      <input type="email" id="email" required><br><br>
 
       <label>Password:</label><br>
-      <input type="password" name="password" placeholder="Enter password" required><br><br>
+      <input type="password" id="password" required><br><br>
 
-      <button type="submit">Create Account</button>
+      <h3>Company Information</h3>
+      <label>Company Name:</label><br>
+      <input type="text" id="company_name" required><br><br>
+
+      <label>Company Registration Number:</label><br>
+      <input type="text" id="company_reg"><br><br>
+
+      <button type="submit">Submit Registration</button>
     </form>
 
     <p>Already have an account? <a href="#login">Login here</a></p>
-  </div>
+  </section>
 
-  <!--The Login Section -->
-  <div id="login" class="centered-section">
+  <!-- Login Section -->
+  <section id="login" class="centered-section" style="display:none;">
     <h2>Login</h2>
-    <form>
+    <form id="loginForm">
       <label>Email:</label><br>
-      <input type="email" name="login_email" placeholder="Enter email" required><br><br>
+      <input type="email" id="login_email" required><br><br>
 
       <label>Password:</label><br>
-      <input type="password" name="login_password" placeholder="Enter password" required><br><br>
+      <input type="password" id="login_password" required><br><br>
 
-      <button type="submit">Login</button><br><br>
-      <a href="#reset"><button type="button">Forgot Password?</button></a>
+      <button type="submit">Login</button>
     </form>
+  </section>
 
-    <p>Don’t have an account? <a href="#register">Register here</a></p>
-  </div>
+  <!-- Welcome Section -->
+  <section id="welcome" class="centered-section" style="display:none;">
+    <h1>🎉 Welcome to T.E.M Holdings 🎉</h1>
+    <p>
+      At <strong>T.E.M Holdings</strong>, we help South African entrepreneurs fix documents, 
+      register companies, and get their businesses compliant.<br><br>
+      <b>We Live. We Inspire. We Grind.</b>
+    </p>
+  </section>
 
-  <!--The Reset Password Section -->
-  <div id="reset" class="centered-section">
-    <h2>Reset Your Password</h2>
-    <p>Enter your email or phone number, and we’ll send you a code to reset your password.</p>
-    <form>
-      <label>Email or Phone Number:</label><br>
-      <input type="text" name="reset_info" placeholder="Enter email or phone" required><br><br>
-
-      <button type="submit">Send Reset Code</button>
-    </form>
-
-    <p>Back to <a href="#login">Login</a> or <a href="#register">Register</a></p>
-  </div>
-
-  <!--The Footer -->
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 T.E.M Holdings / All Rights Reserved</p>
   </footer>
+
+  <!-- Social Media Icons -->
+  <div class="social-links">
+    <a href="https://www.facebook.com/yourpage" target="_blank"><img src="IMAGES/facebook.png" width="30"></a>
+    <a href="https://www.instagram.com/yourpage" target="_blank"><img src="IMAGES/instagram.png" width="30"></a>
+    <a href="https://twitter.com/yourpage" target="_blank"><img src="IMAGES/twitter.png" width="30"></a>
+    <a href="https://www.linkedin.com/company/yourpage" target="_blank"><img src="IMAGES/linkedin.png" width="30"></a>
+  </div>
+
+  <!-- External JS File -->
+  <script src="js/main.js" defer></script>
 
 </body>
 </html>
