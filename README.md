@@ -48,3 +48,13 @@ The following features were added in Part 3:
 
 ```bash
 git clone https://github.com/yourusername/tem-holdings-website.git
+
+
+
+References
+
+Google Developers. (2025). SEO Starter Guide. [online] Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide
+
+W3Schools. (2025). HTML Forms Reference. [online] Available at: https://www.w3schools.com/html/html_forms.asp
+
+Stack Overflow Contributors. (2025). How to validate forms using JavaScript. [online] Available at: https://stackoverflow.com
